@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formulario de Inscripción</title>
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background: #f6f8fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .form-container {
+        background: #ffffff;
+        width: 100%;
+        max-width: 480px;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: 600;
+    }
+
+    label {
+        font-weight: 500;
+        margin-bottom: 6px;
+        display: block;
+        color: #444;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 18px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #4285f4;
+        box-shadow: 0 0 6px rgba(66, 133, 244, 0.2);
+        outline: none;
+    }
+
+    textarea {
+        height: 90px;
+        resize: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #3367d6;
+    }
+    .contacto{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+    }
+    .contenedor-contacto{
+        display: flex;
+        justify-content: space-evenly;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h2>Inscripción al Curso</h2>
+
+    <form>
+        <label for="name">Nombre y apellido *</label>
+        <input type="text" id="name" name="name" required>
+
+        <p>Curso elegido: <strong>Inglés para Principiantes</strong></p>
+
+        <label for="modalidad">Modalidad *</label>
+        <select id="modalidad" name="modalidad" required>
+            <option value="">Seleccionar...</option>
+            <option value="virtual">Virtual</option>
+            <option value="presencial">Presencial</option>
+            <option value="hibrida">Híbrida</option>
+        </select>
+
+        <label for="horario">Horario preferido *</label>
+        <select id="horario" name="horario" required>
+            <option value="">Seleccionar...</option>
+            <option value="maniana">Mañana - 9 a 11 hs</option>
+            <option value="tarde">Tarde - 14 a 17 hs</option>
+            <option value="noche">Noche - 19 a 21 hs</option>
+        </select>
+
+        <label for="nivel">Nivel de conocimientos *</label>
+        <select id="nivel" name="nivel" required>
+            <option value="">Seleccionar...</option>
+            <option value="principiante">Principiante</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
+        </select>
+
+        <label for="necesidades">¿Tenés alguna necesidad especial? *</label>
+        <select id="necesidades" name="necesidades" required>
+            <option value="">Seleccionar...</option>
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+        </select>
+
+        
+        <div id="detalle-necesidades" style="display:none; margin-top:10px;">
+            <label for="detalle">Por favor, describí tus necesidades:</label>
+            <textarea id="detalle" name="detalle"></textarea>
+        </div>
+        
+        <p>Preferencia de contacto: *</p>
+        <div class="contenedor-contacto">
+
+            <div class="contacto">
+                <label for="email">Email</label>
+                <input type="radio" name="contacto" id="email">
+            </div>
+            <div class="contacto">
+                <label for="telefono">Teléfono</label>
+                <input type="radio" name="contacto" id="telefono">
+            </div>
+            <div class="contacto">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="radio" name="contacto" id="whatsapp">
+            </div>
+        </div>
+
+        <label for="objetivo">¿Por qué querés hacer este curso? *</label>
+        <textarea id="objetivo" name="objetivo" required></textarea>
+
+        <button type="submit">Enviar inscripción</button>
+    </form>
+</div>
+
+</body>
+<script>
+    const select = document.getElementById("necesidades");
+    const detalle = document.getElementById("detalle-necesidades");
+
+    select.addEventListener("change", () => {
+        if (select.value === "si") {
+            detalle.style.display = "block";
+        } else {
+            detalle.style.display = "none";
+        }
+    });
+</script>
+</html>

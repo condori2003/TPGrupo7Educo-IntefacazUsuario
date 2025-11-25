@@ -1,0 +1,25 @@
+---- COLORES ----
+
+| Rol                 | Color     | Uso sugerido                                           |
+| ------------------- | --------- | ------------------------------------------------------ |
+| **Primario**        | `#1E88E5` | Botones principales, enlaces, énfasis (azul educativo) |
+| **Secundario**      | `#dbe9ff` | bloques secundarios, botones secundarios               |
+| **Fondo claro**     | `#F5F7FA` | Fondo de secciones o formularios                       |
+| **Texto principal** | `#212121` | Texto general                                          |
+| **Acento neutro**   | `#FFC107` | Iconos o alertas positivas                             |
+| **Error / Alerta**  | `#E53935` | Mensajes de error                                      |
+
+
+---- FONT ----
+
+Titulares: Poppins (semi-bold o bold)
+
+Texto: Open Sans o Roboto
+
+Jerarquía visual:
+
+H1 (títulos): Poppins Bold – mayúsculas o capitalizadas
+
+H2/H3: Poppins SemiBold
+
+Párrafos: Open Sans Regular (16–18 px)

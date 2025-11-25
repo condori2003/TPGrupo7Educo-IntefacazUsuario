@@ -1,0 +1,450 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>EduOnline - Cursos Online</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+            font-family: 'open sans', sans-serif;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 600px;
+            color: white;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .registrarse {
+            background-color: grey;
+            border-color: grey;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: white;
+        }
+        .hero-content {
+            padding-top: 150px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.25rem;
+        }
+        .courses-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        .filter-sidebar {
+            background-color: #dbe9ff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .courses-section{
+            background-color: #F5F7FA;
+        }
+        .course-card {
+            border: none;
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        .course-card .card-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .course-card .card-text {
+            margin-bottom: 0;
+            flex-grow: 1;
+        }
+        .course-image {
+            height: 170px;
+            object-fit: cover;
+        }
+        .card-actions {
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+        .filter-section {
+            margin-bottom: 25px;
+        }
+        .filter-section h5 {
+            margin-bottom: 15px;
+        }
+        .btn-primario {
+            background-color: #1E88E5;
+            border-color: #007bff;
+            color: white;
+        }
+        .btn-primario:hover {
+            background-color: #1565C0;
+            border-color: #0056b3;
+            color: white;
+        }
+        .txt-titulo {
+            font-family: 'poppins';
+            font-weight: bold;
+        }
+        .txt-subtitulo {
+            font-family: 'poppins';
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EduCo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses-section">Cursos</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Instructores</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primario ms-2" href="#">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary registrarse ms-2" href="">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 hero-content">
+                    <h1 class="mb-4 txt-titulo">Educación gratuita, cercana e inclusiva</h1>
+                    <p class="mb-4 txt-subtitulo">Accedé a formación online adaptada a tu ritmo y tus necesidades.
+                                    Todos los cursos son creados por docentes y centros locales para tu desarrollo profesional.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#courses-section" class="btn btn-primario btn-lg">Explorar Cursos</a>
+                        <!-- <a href="#" class="btn btn-outline-light btn-lg">¿Cómo Funciona?</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses-section " id="courses-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <div class="filter-sidebar">
+                        <h4 class="mb-4">Filtros</h4>
+                        
+                        <div class="filter-section">
+                            <h5>Buscar</h5>
+                            <input type="text" class="form-control mb-3" placeholder="Buscar cursos...">
+                        </div>
+
+                        <div class="filter-section">
+                            <h5>Categorías</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="programming">
+                                <label class="form-check-label" for="programming">Programación</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="design">
+                                <label class="form-check-label" for="design">Diseño</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="business">
+                                <label class="form-check-label" for="business">Negocios</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="marketing">
+                                <label class="form-check-label" for="marketing">Marketing</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="oficios">
+                                <label class="form-check-label" for="oficios">Oficios</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="idiomas">
+                                <label class="form-check-label" for="idiomas">Idiomas</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h5>Nivel</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="beginner">
+                                <label class="form-check-label" for="beginner">Principiante</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="intermediate">
+                                <label class="form-check-label" for="intermediate">Intermedio</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="advanced">
+                                <label class="form-check-label" for="advanced">Avanzado</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h5>Modalidad</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="Presencial">
+                                <label class="form-check-label" for="Presencial">Presencial</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="Virtual">
+                                <label class="form-check-label" for="Virtual">Virtual</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="Híbrido">
+                                <label class="form-check-label" for="Híbrido">Híbrido</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h5>Duración</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="short">
+                                <label class="form-check-label" for="short">20-25 horas</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="medium">
+                                <label class="form-check-label" for="medium">30-40 horas</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="long">
+                                <label class="form-check-label" for="long">60+ horas</label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary w-100 mt-3">Aplicar Filtros</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="row g-4">
+                        <template id="course-template" style="display: none;">
+                            <div class="card course-card">
+                                <img class="card-img-top course-image">
+                                <div class="card-body">
+                                    <span class="badge mb-2"></span>
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text"></p>
+                                    <div class="card-actions d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" class="card-img-top course-image" alt="Curso de Programación">
+                                <div class="card-body">
+                                    <span class="badge bg-primary mb-2">Programación</span>
+                                    <h5 class="card-title">Desarrollo Web Full Stack</h5>
+                                    <p class="card-text">Aprende HTML, CSS, JavaScript y más para convertirte en desarrollador web.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.8 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d" class="card-img-top course-image" alt="Curso de Diseño">
+                                <div class="card-body">
+                                    <span class="badge bg-success mb-2">Diseño</span>
+                                    <h5 class="card-title">Diseño UI/UX Avanzado</h5>
+                                    <p class="card-text">Domina las técnicas modernas de diseño de interfaces y experiencia de usuario.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.9 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=815" class="card-img-top course-image" alt="Curso de Marketing">
+                                <div class="card-body">
+                                    <span class="badge bg-warning mb-2">Marketing</span>
+                                    <h5 class="card-title">Marketing Digital</h5>
+                                    <p class="card-text">Estrategias efectivas para promocionar tu negocio en línea.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.7 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" class="card-img-top course-image" alt="Curso de Negocios">
+                                <div class="card-body">
+                                    <span class="badge bg-info mb-2">Negocios</span>
+                                    <h5 class="card-title">Emprendimiento Digital</h5>
+                                    <p class="card-text">Aprende a crear y gestionar tu negocio en línea desde cero.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.6 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="card-img-top course-image" alt="Curso de Programación">
+                                <div class="card-body">
+                                    <span class="badge bg-primary mb-2">Programación</span>
+                                    <h5 class="card-title">Python para Data Science</h5>
+                                    <p class="card-text">Análisis de datos y machine learning con Python.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.9 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490" class="card-img-top course-image" alt="Curso de Diseño">
+                                <div class="card-body">
+                                    <span class="badge bg-success mb-2">Diseño</span>
+                                    <h5 class="card-title">Motion Graphics</h5>
+                                    <p class="card-text">Crea animaciones impactantes para redes sociales y publicidad.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.7 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e" class="card-img-top course-image" alt="Curso de Electricidad">
+                                <div class="card-body">
+                                    <span class="badge bg-danger mb-2">Oficios</span>
+                                    <h5 class="card-title">Instalaciones Eléctricas Domiciliarias</h5>
+                                    <p class="card-text">Aprende desde cero a realizar instalaciones eléctricas seguras en hogares.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.9 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1619759247130-4e7a70f2fe27?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=824" class="card-img-top course-image" alt="Curso de Carpintería">
+                                <div class="card-body">
+                                    <span class="badge bg-danger mb-2">Oficios</span>
+                                    <h5 class="card-title">Carpintería para Principiantes</h5>
+                                    <p class="card-text">Descubre las técnicas básicas de la carpintería y crea tus primeros proyectos.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.8 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871" class="card-img-top course-image" alt="Curso de Inglés">
+                                <div class="card-body">
+                                    <span class="badge bg-info mb-2">Idiomas</span>
+                                    <h5 class="card-title">Inglés para Principiantes</h5>
+                                    <p class="card-text">Domina las bases del inglés con nuestro método práctico y conversacional.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.9 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://plus.unsplash.com/premium_photo-1663045495725-89f23b57cfc5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870" class="card-img-top course-image" alt="Curso de Plomería">
+                                <div class="card-body">
+                                    <span class="badge bg-danger mb-2">Oficios</span>
+                                    <h5 class="card-title">Plomería Básica</h5>
+                                    <p class="card-text">Aprende a realizar reparaciones y mantenimiento básico de instalaciones sanitarias.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.7 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1528164344705-47542687000d" class="card-img-top course-image" alt="Curso de Japonés">
+                                <div class="card-body">
+                                    <span class="badge bg-info mb-2">Idiomas</span>
+                                    <h5 class="card-title">Japonés Básico</h5>
+                                    <p class="card-text">Introducción al idioma japonés: escritura, pronunciación y conversación básica.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.8 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card course-card">
+                                <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828" class="card-img-top course-image" alt="Curso de Pintura">
+                                <div class="card-body">
+                                    <span class="badge bg-danger mb-2">Oficios</span>
+                                    <h5 class="card-title">Pintura y Acabados</h5>
+                                    <p class="card-text">Aprende técnicas profesionales de pintura y acabados para interiores y exteriores.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <span class="text-muted">4.7 ★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
