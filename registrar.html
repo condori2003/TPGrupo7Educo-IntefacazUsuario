@@ -3,57 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar</title>
-    <!-- Agregar Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Crear Cuenta | EduCo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #f7f7f7;
-        }
-        .register-container {
-            max-width: 400px;
-            margin: auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .register-btn {
-            width: 100%;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/a865a7002e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="d-flex justify-content-center align-items-center vh-100">
-        <div class="register-container">
-            <h2 class="text-center mb-4">Registrar</h2>
-            <p class="text-center mb-3">Ingresa sus datos</p>
-            <form action="loginVista.html">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name" required>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <h1 class="brand">EduCo</h1>
+            </div>
+            <ul class="navbar-links">
+                <li><a class="nav-link" href="inicio.html">Inicio</a></li>
+                <li><a class="nav-link" href="">Cursos</a></li>
+                <li><a class="login-btn user-btn" href="loginVista.html">Iniciar Sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="register-container">
+            <form class="register-form" id="registerForm">
+                <div class="icon-user">
+                    <i class="fa-regular fa-user"></i>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" required>
-                </div>
-                <div class="mb-3">
-                    <label for="dob" class="form-label">Fecha de nacimiento</label>
-                    <input type="date" class="form-control" id="dob" required>
-                </div>
-                <button type="submit" class="btn btn-primary register-btn">Crear cuenta</button>
-                <div class="text-center mt-3">
-                    <p>Ya tienes cuenta? <a href="loginVista.html">Iniciar sesión</a></p>
-                </div>
+                <h1>Crear Cuenta</h1>
+                <p class="subtitle">Complete el formulario para registrarse</p>
+                <label>Nombre completo
+                    <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                </label>
+                <label>Correo electrónico
+                    <input type="email" name="email" placeholder="ejemplo@correo.com" required>
+                </label>
+                <label>Contraseña
+                    <input type="password" name="password" placeholder="Mínimo 6 caracteres" minlength="6" required>
+                    <i class="fa-solid fa-eye toggle-password"></i>
+                </label>
+                <label>Fecha de nacimiento
+                    <input type="date" name="fecha" placeholder="mm/dd/yyyy" required>
+                </label>
+                <button type="submit" class="register-btn">Crear cuenta</button>
+                <p class="login-link">¿Ya tienes cuenta? <a href="#">Inicia sesión aquí</a></p>
             </form>
-        </div>
-    </div>
-
-    <!-- Agregar Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
