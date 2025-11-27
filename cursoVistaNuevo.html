@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vista Curso</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+
+    /* Truncar descripción en pantallas pequeñas y mostrar botón "Leer más" */
+    .course-desc{
+      line-height:1.5rem;
+      transition: max-height .25s ease;
+    }
+    body{
+            font-family: 'open sans', sans-serif;
+        }
+    .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .registrarse {
+            background-color: grey;
+            border-color: grey;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: white;
+        }
+    .primer-contenedor{
+      background-image: url(https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      background-position: center center;
+      background-size: cover;
+      margin-top: 1rem;
+    }
+    .titulo{
+      color: white;
+      background-color: rgba(0, 0, 255, 0.6);
+      width: fit-content;
+      padding: 10px;
+    }
+    .instructor-img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #ddd;
+        background-size: cover;
+        background-position: center;
+    }
+    .rating {
+        color: #fbbf24;
+        font-size: 18px;
+    }
+    .read-more{ cursor:pointer; }
+
+    @media (max-width: 768px){
+      .course-desc{
+        max-height: 4.5rem; /* mostrar ~3 líneas */
+        overflow: hidden;
+      }
+      .cambio-entra{
+        display: block !important;
+        margin-bottom: 1rem;
+      }
+      .cambio-sale{
+        display: none !important;
+      }
+      .course-desc.expanded{ max-height: 1000px; }
+      .read-more{ display: inline-block; }
+    }
+
+    @media (min-width: 768px){
+      .read-more{ display: none; }
+    }
+
+  </style>
+</head>
+<body class="bg-light">
+<!-- header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="#">EduCo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses-section">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primario ms-2" href="#">Daniel Condori</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container-fluid">
+    <div class="col-12 bg-white rounded p-5 primer-contenedor">  
+      <h1 class="titulo rounded">Introducción al Desarrollo Web</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row g-4 mt-2 mx-auto">
+    <!-- Contenido Principal -->
+    <div class="col-12 col-md-8 col-lg-8 rounded">
+      <!-- Desc -->
+      <div class="bg-white shadow-sm rounded mb-3">
+        <h4 class="p-2"><u><strong>Descripción del Curso</u></strong></h4>
+        <div>
+          <p class="course-desc px-4 pb-3 my-2">Bienvenido al curso de Introducción al Desarrollo Web. Este programa te proporcionará las habilidades fundamentales para construir tus propios sitios web desde cero. Cubriremos los tres pilares del desarrollo frontend:
+            <br><strong> • HTML</strong>: Para estructurar y dar contenido a tus páginas.
+            <br><strong> • CSS</strong>: Para diseñar y dar estilo visual a tu proyecto.
+            <br><strong> • Diseño Adaptable</strong> (Responsive Design): Para asegurar que tus creaciones se vean perfectas en cualquier dispositivo (móvil, tableta o escritorio).
+            Al finalizar, estarás listo para dar tus primeros pasos como desarrollador web y publicar tu primer portafolio en línea.</p>
+            <button class="btn btn-link p-0 read-more" aria-expanded="false">Leer más</button>
+        </div>
+      </div>
+      <div class="d-none cambio-entra">
+        <div class="bg-white shadow-sm p-3 rounded mb-4">
+          <p>⏳<Strong>Duración:</Strong> 8 Semanas</p>
+          <p>💻<strong>Modalidad:</strong> Virtual</p>
+          <p>📚<strong>Nivel:</strong> Principiante</p>
+          <p>📅<strong>Inicio:</strong> 10 de Diciembre 2025</p>
+          <a href="./formulario-inscripcion.html"><button class="btn btn-dark w-100 my-3">Inscribirme ahora</button></a>
+        </div>
+        
+        <div class="bg-white shadow-sm p-3 rounded">
+          <h6 class="fw-bold">Requisitos</h6>
+          <ul class="list-unstyled  mt-2">
+            <li>• Tener acceso a computadora.</li>
+            <li>• Conexión a internet.</li>
+            <li>• No se requieren conocimientos previos.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- contenidos -->
+      <div class="bg-white shadow-sm rounded mb-3">
+        <h4 class="p-2"><strong><u>Contenidos</u></strong></h4>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Unidad 1 - HTML
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Esta unidad introduce <strong> HTML (HyperText Markup Language)</strong>, el lenguaje fundamental utilizado para crear y estructurar el contenido de las páginas web. Aprenderemos a utilizar etiquetas y elementos para organizar texto, imágenes y enlaces, sentando las bases esenciales del desarrollo web.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Unidad 2 - CSS
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Esta unidad se centra en <strong> CSS (Cascading Style Sheets u Hojas de Estilo en Cascada)</strong>. Descubriremos cómo este lenguaje controla la presentación visual de una página web, permitiéndonos definir colores, fuentes, diseños y la disposición de los elementos para lograr un diseño atractivo y responsivo.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Unidad 3 - Responsive Design
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                En esta unidad, abordaremos el <strong> Diseño Adaptable (Responsive Design)</strong>. Aprenderemos las técnicas clave de CSS, como las media queries, para asegurar que nuestros sitios web se vean y funcionen perfectamente en cualquier dispositivo, desde teléfonos móviles y tabletas hasta computadoras de escritorio.       </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- instructor -->
+        <div class="bg-white shadow-sm rounded mb-3 ">
+          <h4 class="p-2"><strong><u>Instructor/a</u></strong></h4>
+          <div class="d-flex p-3">
+            <div class="instructor-img" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="mx-3">
+              <h3>Mariana López</h3>
+              <p>Desarrolladora Full Stack con 10 años de experiencia.</p>
+            </div>
+          </div>
+          </div>
+    </div>
+
+    <!-- Panel Derecho -->
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="sticky-top cambio-sale">
+        <div class="bg-white shadow-sm p-3 rounded mb-4">
+          <p>⏳<Strong>Duración:</Strong> 8 Semanas</p>
+          <p>💻<strong>Modalidad:</strong> Virtual</p>
+          <p>📚<strong>Nivel:</strong> Principiante</p>
+          <p>📅<strong>Inicio:</strong> 10 de Diciembre 2025</p>
+          <a href="./formulario-inscripcion.html"><button class="btn btn-dark w-100 my-3">Inscribirme ahora</button></a>
+        </div>
+        
+        <div class="bg-white shadow-sm p-3 rounded">
+          <h6 class="fw-bold">Requisitos</h6>
+          <ul class="list-unstyled  mt-2">
+            <li>• Tener acceso a computadora.</li>
+            <li>• Conexión a internet.</li>
+            <li>• No se requieren conocimientos previos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    const btn = document.querySelector('.read-more');
+    const desc = document.querySelector('.course-desc');
+    if(!btn || !desc) return;
+
+    function isOverflowing(el){
+      return el.scrollHeight > el.clientHeight + 1;
+    }
+
+    // Si el contenido no desborda, ocultar el botón (mejor UX)
+    if(!isOverflowing(desc)) btn.style.display = 'none';
+
+    btn.addEventListener('click', function(){
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if(expanded){
+        desc.classList.remove('expanded');
+        btn.setAttribute('aria-expanded','false');
+        btn.textContent = 'Leer más';
+      } else {
+        desc.classList.add('expanded');
+        btn.setAttribute('aria-expanded','true');
+        btn.textContent = 'Leer menos';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+<!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Daniel Condori
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Mis cursos</a></li>
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          </ul>
+        </li> -->
