@@ -38,7 +38,7 @@
         }
         body {
             font-family: 'open sans', sans-serif;
-            background: #f5f7fa;
+              background-image: linear-gradient(#ffffff, #90bcff);
             margin: 0;
             padding: 0;
         }
@@ -234,36 +234,37 @@ form{
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">EduCo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#courses-section">Cursos</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Categorías</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Instructores</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-primario ms-2" href="#">Iniciar Sesión</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-primary registrarse ms-2" href="">Registrarse</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <!-- header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container">
+      <a class="navbar-brand" href="./inicioSinSesionVista.html">EduCo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="./inicioSinSesionVista.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./inicioSinSesionVista.html#courses-section">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link este" href="">|</a>
+          </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Daniel Condori
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+            <li><a class="dropdown-item" href="./loginVista.html">Cerrar sesión</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 <div class="profile-container">
     
@@ -354,22 +355,19 @@ form{
     <div class="course-card">
         <h3>Introducción a la Programación</h3>
         <p class="course-info">Modalidad: Virtual</p>
-        <p class="course-info">Progreso: 60%</p>
-        <button class="course-btn">Continuar</button>
+        <p class="course-info">Próxima clase: 20/11</p>
     </div>
 
     <div class="course-card">
         <h3>Diseño Web Básico</h3>
         <p class="course-info">Modalidad: Presencial</p>
-        <p class="course-info">Próxima clase: 20/11</p>
-        <button class="course-btn">Ver detalles</button>
+        <p class="course-info">Próxima clase: 24/11</p>
     </div>
 
     <div class="course-card">
         <h3>Marketing Digital</h3>
         <p class="course-info">Modalidad: Virtual</p>
-        <p class="course-info">Progreso: 25%</p>
-        <button class="course-btn">Continuar</button>
+        <p class="course-info">Próxima clase: 21/11</p>
     </div>
 
 </div>

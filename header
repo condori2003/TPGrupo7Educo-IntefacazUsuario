@@ -1,0 +1,59 @@
+    body {
+      font-family: 'open sans', sans-serif;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .registrarse {
+      background-color: grey;
+      border-color: grey;
+    }
+    @media (max-width: 991px) {
+      .este{
+        display: none;
+      }
+    }
+    .nav-link {
+      font-weight: 500;
+      color: white;
+    }
+
+  <!-- header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container">
+      <a class="navbar-brand" href="./inicioSinSesionVista.html">EduCo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="./inicioSinSesionVista.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./inicioSinSesionVista.html#courses-section">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link este" href="">|</a>
+          </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Daniel Condori
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+            <li><a class="dropdown-item" href="./loginVista.html">Cerrar sesión</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  para el body
+
+  background-image: linear-gradient(#ffffff, #90bcff);

@@ -41,7 +41,7 @@
         }
         .courses-section {
             padding: 80px 0;
-            background-color: #f8f9fa;
+              background-image: linear-gradient(#ffffff, #90bcff);
         }
         .filter-sidebar {
             background-color: #dbe9ff;
@@ -105,28 +105,37 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">EduCo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#courses-section">Cursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-primario ms-2" href="#">Daniel Condori</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+      <!-- header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container">
+      <a class="navbar-brand" href="./inicioSinSesionVista.html">EduCo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="./inicioSinSesionVista.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./inicioSinSesionVista.html#courses-section">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link este" href="">|</a>
+          </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Daniel Condori
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+            <li><a class="dropdown-item" href="./loginVista.html">Cerrar sesión</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <section class="hero d-flex align-items-center">
         <div class="container">
             <div class="row">
@@ -245,7 +254,7 @@
                                     <h5 class="card-title"></h5>
                                     <p class="card-text"></p>
                                     <div class="card-actions d-flex justify-content-between align-items-center">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted"></span>
                                     </div>
                                 </div>
@@ -259,7 +268,7 @@
                                     <h5 class="card-title">Desarrollo Web Full Stack</h5>
                                     <p class="card-text">Aprende HTML, CSS, JavaScript y más para convertirte en desarrollador web.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.8 ★</span>
                                     </div>
                                 </div>
@@ -274,7 +283,7 @@
                                     <h5 class="card-title">Diseño UI/UX Avanzado</h5>
                                     <p class="card-text">Domina las técnicas modernas de diseño de interfaces y experiencia de usuario.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.9 ★</span>
                                     </div>
                                 </div>
@@ -289,7 +298,7 @@
                                     <h5 class="card-title">Marketing Digital</h5>
                                     <p class="card-text">Estrategias efectivas para promocionar tu negocio en línea.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.7 ★</span>
                                     </div>
                                 </div>
@@ -304,7 +313,7 @@
                                     <h5 class="card-title">Emprendimiento Digital</h5>
                                     <p class="card-text">Aprende a crear y gestionar tu negocio en línea desde cero.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.6 ★</span>
                                     </div>
                                 </div>
@@ -319,7 +328,7 @@
                                     <h5 class="card-title">Python para Data Science</h5>
                                     <p class="card-text">Análisis de datos y machine learning con Python.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.9 ★</span>
                                     </div>
                                 </div>
@@ -334,7 +343,7 @@
                                     <h5 class="card-title">Motion Graphics</h5>
                                     <p class="card-text">Crea animaciones impactantes para redes sociales y publicidad.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.7 ★</span>
                                     </div>
                                 </div>
@@ -349,7 +358,7 @@
                                     <h5 class="card-title">Instalaciones Eléctricas Domiciliarias</h5>
                                     <p class="card-text">Aprende desde cero a realizar instalaciones eléctricas seguras en hogares.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.9 ★</span>
                                     </div>
                                 </div>
@@ -364,7 +373,7 @@
                                     <h5 class="card-title">Carpintería para Principiantes</h5>
                                     <p class="card-text">Descubre las técnicas básicas de la carpintería y crea tus primeros proyectos.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.8 ★</span>
                                     </div>
                                 </div>
@@ -379,7 +388,7 @@
                                     <h5 class="card-title">Inglés para Principiantes</h5>
                                     <p class="card-text">Domina las bases del inglés con nuestro método práctico y conversacional.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.9 ★</span>
                                     </div>
                                 </div>
@@ -394,7 +403,7 @@
                                     <h5 class="card-title">Plomería Básica</h5>
                                     <p class="card-text">Aprende a realizar reparaciones y mantenimiento básico de instalaciones sanitarias.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.7 ★</span>
                                     </div>
                                 </div>
@@ -409,7 +418,7 @@
                                     <h5 class="card-title">Japonés Básico</h5>
                                     <p class="card-text">Introducción al idioma japonés: escritura, pronunciación y conversación básica.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.8 ★</span>
                                     </div>
                                 </div>
@@ -424,7 +433,7 @@
                                     <h5 class="card-title">Pintura y Acabados</h5>
                                     <p class="card-text">Aprende técnicas profesionales de pintura y acabados para interiores y exteriores.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <a href="#" class="btn btn-primario">Ver más</a>
+                                        <a href="./cursoVistaNuevo.html" class="btn btn-primario">Ver más</a>
                                         <span class="text-muted">4.7 ★</span>
                                     </div>
                                 </div>
