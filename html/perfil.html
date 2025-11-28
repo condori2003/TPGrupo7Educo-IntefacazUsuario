@@ -230,6 +230,64 @@ form{
                 text-align: center;
             }
         }
+.footer {
+  background-color: #0d47a1;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.footer-column ul li:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width: 700px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0px;
+  }
+
+  .footer-column {
+    margin-bottom: 25px;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -348,6 +406,33 @@ form{
 </div>
 
 </div>
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h3>Equipo de Desarrollo</h3>
+      <ul>
+        <li>Matias, Cantoni</li>
+        <li>Marcos, Albarracín</li>
+        <li>Daniel, Condori</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>DNI</h3>
+      <ul>
+        <li>43.992.333</li>
+        <li>44.100.539</li>
+        <li>44.588.832</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Educo — Plataforma Educativa Local</p>
+  </div>
+</footer>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
