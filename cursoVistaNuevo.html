@@ -18,6 +18,7 @@
     .primario{
       background-color: #1E88E5;
       color: white;
+      height: 3.5rem;
     }
     body {
       font-family: 'open sans', sans-serif;
@@ -87,6 +88,21 @@
     .read-more {
       cursor: pointer;
     }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+
+    /* Aplica la animación al botón */
+    .animate-blink {
+      animation: blink 1.5s ease-in-out infinite;
+    }
+    .animate-blink:hover{
+      animation: none;
+      background-color: #02569f;
+      color: white;
+    }
     @media (max-width: 991px) {
       .este{
         display: none;
@@ -149,7 +165,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
-            <li><a class="dropdown-item" href="./loginVista.html">Cerrar sesión</a></li>
+            <li><a class="dropdown-item bg-danger rounded" href="./loginVista.html">Cerrar sesión</a></li>
           </ul>
         </li>
         </ul>
@@ -197,7 +213,7 @@
             <p>📚<strong> Nivel:</strong> Principiante</p>
             <p>📅<strong> Inicio:</strong> 10 de Diciembre 2025</p>
             <p>💡<strong>Dia/s:</strong> Miercoles</p>
-            <a href="./formulario-inscripcion.html"><button class="btn btn-dark w-100 my-3 primario">Inscribirme
+            <a href="./formulario-inscripcion.html"><button class="btn btn-dark w-100 my-3 primario animate-blink">Inscribirme
                 ahora</button></a>
           </div>
 
@@ -295,7 +311,7 @@
             <p>📚<strong> Nivel:</strong> Principiante</p>
             <p>📅<strong> Inicio:</strong> 10 de Diciembre 2025</p>
             <p>💡<strong> Dia/s:</strong> Miercoles</p>
-            <a href="./formulario-inscripcion.html"><button class="btn w-100 my-3 primario">Inscribirme
+            <a href="./formulario-inscripcion.html"><button class="btn w-100 my-3 primario animate-blink">Inscribirme
                 ahora</button></a>
           </div>
 
