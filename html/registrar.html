@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Cuenta | EduCo</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar">
             <div class="navbar-logo">
-                <h1 class="brand">EduCo</h1>
+                <h1 class="brand"><a href="inicio.html" style="text-decoration: none; color: white;">EduCo</a></h1>
             </div>
             <ul class="navbar-links">
                 <li><a class="nav-link" href="inicio.html">Inicio</a></li>
@@ -32,7 +32,7 @@
             <form class="register-form" id="registerForm">
                 <div class="icon-user">
                     <i class="fa-regular fa-user"></i>
-                </div>
+                </div> 
                 <h1>Crear Cuenta</h1>
                 <p class="subtitle">Complete el formulario para registrarse</p>
                 <label>Nombre completo
@@ -43,16 +43,16 @@
                 </label>
                 <label>Contraseña
                     <input type="password" name="password" placeholder="Mínimo 6 caracteres" minlength="6" required>
-                    <i class="fa-solid fa-eye toggle-password"></i>
+                    <i class="fa-solid fa-eye toggle-password" style="top: 70%;"></i>
                 </label>
                 <label>Fecha de nacimiento
                     <input type="date" name="fecha" placeholder="mm/dd/yyyy" required>
                 </label>
                 <button type="submit" class="register-btn">Crear cuenta</button>
-                <p class="login-link">¿Ya tienes cuenta? <a href="#">Inicia sesión aquí</a></p>
+                <p class="login-link">¿Ya tienes cuenta? <a href="loginVista.html">Inicia sesión aquí</a></p>
             </form>
         </section>
     </main>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

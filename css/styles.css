@@ -48,7 +48,7 @@ body {
 }
 
 .brand {
-    font-weight: bold;
+    font-weight: inherit;
     font-size: 1.5rem;
     color: #fff;
     font-family: 'Poppins', sans-serif;
@@ -200,7 +200,7 @@ main {
     border: none;
     border-radius: 11px;
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: 500;
     width: 100%;
     margin-top: .6rem;
     box-shadow: 0 2px 8px rgba(44, 128, 255, 0.14);
@@ -271,8 +271,8 @@ a:last-child {
 
 .toggle-password {
     position: absolute;
-    right: 18px;
-    top: 68%;
+    right: 14px;
+    top: 56%;
     transform: translateY(-50%);
     cursor: pointer;
     user-select: none;

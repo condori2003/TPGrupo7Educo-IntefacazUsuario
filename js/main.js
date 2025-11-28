@@ -9,7 +9,7 @@ togglePassword.addEventListener('click', function () {
 });
 
 // Validación simple al enviar el formulario
-document.getElementById('registerForm').addEventListener('submit', function(e) {
+document.getElementById('registerForm').addEventListener('submit', function (e) {
     const nombre = this.nombre.value.trim();
     const email = this.email.value.trim();
     const password = this.password.value;

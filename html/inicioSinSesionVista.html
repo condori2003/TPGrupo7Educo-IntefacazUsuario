@@ -8,6 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         body{
             font-family: 'open sans', sans-serif;
+        
         }
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -17,8 +18,8 @@
             min-height: 600px;
             color: white;
         }
-        .navbar-brand {
-            font-weight: bold;
+        .navbar-brand { 
+            font-weight: bold; 
             font-size: 1.5rem;
         }
         .registrarse {
@@ -41,7 +42,8 @@
         }
         .courses-section {
             padding: 80px 0;
-              background-image: linear-gradient(#ffffff, #90bcff);
+            /* Basic linear gradient from top to bottom (default direction) */
+            background-image: linear-gradient(#ffffff, #90bcff);
         }
         .filter-sidebar {
             background-color: #dbe9ff;
@@ -49,9 +51,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .courses-section{
-            background-color: #F5F7FA;
-        }
+
         .course-card {
             border: none;
             transition: transform 0.3s ease;
@@ -105,37 +105,37 @@
     </style>
 </head>
 <body>
-      <!-- header -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <div class="container">
-      <a class="navbar-brand" href="./inicioSinSesionVista.html">EduCo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="./inicioSinSesionVista.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./inicioSinSesionVista.html#courses-section">Cursos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link este" href="">|</a>
-          </li>
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Daniel Condori
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
-            <li><a class="dropdown-item bg-danger rounded" href="./loginVista.html">Cerrar sesión</a></li>
-          </ul>
-        </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./inicioSinSesionVista.html">EduCo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses-section">Cursos</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Instructores</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primario ms-2" href="loginVista.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary registrarse ms-2" href="registrar.html">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <section class="hero d-flex align-items-center">
         <div class="container">
             <div class="row">
